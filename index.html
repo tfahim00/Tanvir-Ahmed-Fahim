@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tanvir Ahmed Fahim — Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <img src="avatar.png" alt="Tanvir Ahmed Fahim" class="avatar">
+      <div class="intro">
+        <h1>Tanvir Ahmed Fahim</h1>
+        <p class="role">Assistant Software Engineer — RedDot Digital Limited</p>
+        <p class="bio">Seeking challenging opportunities where my passion for coding and problem-solving can be harnessed to contribute significantly. Experienced with Laravel, Vue.js, Node.js and modern web development.</p>
+        <div class="links">
+          <a href="mailto:tfahim00@gmail.com">tfahim00@gmail.com</a>
+          <a href="https://github.com/tfahim00" target="_blank" rel="noopener">GitHub</a>
+          <a href="http://www.linkedin.com/in/tanvir-ahmed-fahim-2648ba208" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+      <button id="theme-toggle" aria-label="Toggle theme">🌓</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>Skills</h2>
+      <ul class="skills">
+        <li>C++</li>
+        <li>PHP</li>
+        <li>JavaScript</li>
+        <li>Laravel</li>
+        <li>Node.js / Express</li>
+        <li>MySQL</li>
+        <li>Git</li>
+        <li>Linux (Ubuntu)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+      <div class="card">
+        <h3>Assistant Software Engineer — RedDot Digital Limited</h3>
+        <p class="meta">Nov 2024 — Present</p>
+        <p>Worked on a web-based business process automation platform using Laravel, Vue.js, and MySQL. Improved functionality and implemented process logic to optimize workflows.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <div class="card">
+        <h3>OkExchange (E-Commerce)</h3>
+        <p class="meta">2023 — React, Node.js, MongoDB</p>
+        <p>Implemented a responsive UI with React and Tailwind. Built RESTful APIs with Express and added JWT authentication. <a href="https://github.com/tfahim00/Final_Year_Project" target="_blank" rel="noopener">View on GitHub</a></p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Achievements</h2>
+      <ul>
+        <li>Champion, Intra University Programming Contest 2022, NSTU</li>
+        <li>150+ contest participations across LeetCode, Codeforces, CodeChef, beecrowd</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <p>B.Sc. in Information & Communication Engineering — Noakhali Science & Technology University</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© 2025 Tanvir Ahmed Fahim — Built with ❤️</small>
+    </div>
+  </footer>
+
+<script>
+const toggle = document.getElementById('theme-toggle');
+const root = document.documentElement;
+function setTheme(isDark) {
+  if(isDark) {
+    root.setAttribute('data-theme', 'dark');
+    localStorage.setItem('theme', 'dark');
+  } else {
+    root.removeAttribute('data-theme');
+    localStorage.setItem('theme', 'light');
+  }
+}
+toggle.addEventListener('click', () => {
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  setTheme(!isDark);
+});
+const saved = localStorage.getItem('theme');
+if(saved === 'dark') setTheme(true);
+</script>
+</body>
+</html>
